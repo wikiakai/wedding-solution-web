@@ -22,13 +22,13 @@ const Description = () => {
       }}
     >
       <Stack
-        direction={{ xs: 'column', sm: 'row' }}
+        direction={{ xs: 'column-reverse', sm: 'row' }}
         justifyContent="space-between"
         alignItems="center"
         spacing={2}
       >
         <Stack spacing={5} sx={{ width: '100%' }}>
-          <Typography variant="servicesCardTitle">
+          <Typography variant="sectionTitle">
             We design & planing for your best moment
           </Typography>
           <Typography variant="descCaption" color={'#000'}>

@@ -48,7 +48,7 @@ const Services = () => {
         flexDirection: 'column',
       }}
     >
-      <Typography variant="services">Our Services</Typography>
+      <Typography variant="sectionTitle">Our Services</Typography>
       <Stack
         direction={{ sm: 'column', md: 'row', lg: 'row' }}
         spacing={{ xs: 1, sm: 2, md: 4 }}

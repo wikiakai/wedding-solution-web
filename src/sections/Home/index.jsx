@@ -1,6 +1,16 @@
 import React from 'react'
-import { Typography, styled, Box, Stack, Button } from '@mui/material'
+import {
+  Typography,
+  styled,
+  Box,
+  Stack,
+  Button,
+  IconButton,
+  Menu,
+  MenuItem,
+} from '@mui/material'
 
+import MenuIcon from '@mui/icons-material/Menu'
 import hero from '../../assets/img/hero.svg'
 import logo from '../../assets/img/logo.svg'
 
@@ -9,7 +19,9 @@ const HeroImg = styled('div')({
   backgroundImage: `url(${hero})`,
   height: '100vh',
   backgroundRepeat: 'no-repeat',
-  backgroundSize: 'contain',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  marginBottom: '80px',
   // filter: "brightness(40%)",
 })
 
@@ -33,14 +45,13 @@ const CtaContainer = styled('div')({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  marginTop: '72px',
+  marginTop: '80px',
 })
 
 const CtaText = styled(Typography)({
   fontFamily: 'Send Flowers',
   fontStyle: 'normal',
   fontWeight: 400,
-  fontSize: '60px',
   lineHeight: '80px',
   textAlign: 'center',
   color: '#FFFFFF',
@@ -49,7 +60,12 @@ const CtaText = styled(Typography)({
 
 const CtaButton = styled(Button)({
   backgroundColor: '#B09D59',
-  padding: '10px 38px',
+  padding: {
+    xs: '10px 28px',
+    sm: '10px 28px',
+    md: '10px 38px',
+    lg: '10px 38px',
+  },
   color: '#FFFFFF',
   fontSize: '20px',
   '&:hover': {
@@ -59,6 +75,15 @@ const CtaButton = styled(Button)({
   },
 })
 const Home = () => {
+  const [anchorElNav, setAnchorElNav] = React.useState(null)
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget)
+  }
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null)
+  }
   const navbarItems = [
     'HOME',
     'WEDDING',
@@ -69,20 +94,75 @@ const Home = () => {
   ]
   return (
     <HeroImg>
-      <Stack direction="row" justifyContent="center" alignItems="center">
-        <HomeTitle variant="home">EVENT</HomeTitle>
-        <img src={logo} width="100px" alt="logo" />
-        <HomeTitle variant="home">SOLUTION</HomeTitle>
+      <Stack
+        direction="row"
+        justifyContent={{
+          xs: 'space-between',
+          sm: 'space-between',
+          md: 'center',
+        }}
+        alignItems="center"
+        padding={{ xs: '10px', sm: '10px' }}
+      >
+        <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
+          <HomeTitle variant="home">EVENT</HomeTitle>
+        </Box>
+        <img src={logo} width="80px" alt="logo" />
+        <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
+          <HomeTitle variant="home">SOLUTION</HomeTitle>
+        </Box>
+        <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }}>
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleOpenNavMenu}
+            color="white"
+          >
+            <MenuIcon sx={{ color: 'white' }} />
+          </IconButton>
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'left',
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
+            sx={{
+              display: { xs: 'block', md: 'none' },
+            }}
+          >
+            {navbarItems.map((page) => (
+              <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">{page}</Typography>
+              </MenuItem>
+            ))}
+          </Menu>
+        </Box>
       </Stack>
-      <Navbar>
-        <Stack direction={'row'} spacing={5}>
-          {navbarItems.map((i) => (
-            <Typography variant="navbar" cursor={'pointer'}>
-              {i}
-            </Typography>
-          ))}
-        </Stack>
-      </Navbar>
+      <Box
+        sx={{
+          display: { xs: 'none', sm: 'none', md: 'block', lg: 'block' },
+        }}
+      >
+        <Navbar>
+          <Stack direction="row" spacing={5}>
+            {navbarItems.map((i) => (
+              <Typography variant="navbar" cursor={'pointer'}>
+                {i}
+              </Typography>
+            ))}
+          </Stack>
+        </Navbar>
+      </Box>
 
       <CtaContainer>
         <Box
@@ -92,9 +172,14 @@ const Home = () => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
+            paddingBottom: '30px',
           }}
         >
-          <CtaText>We’ll make your happy moment unforgettable</CtaText>
+          <CtaText
+            fontSize={{ xs: '40px', sm: '40px', md: '50px', lg: '60px' }}
+          >
+            We’ll make your happy moment unforgettable
+          </CtaText>
           <CtaButton variant="contained">LEARN MORE</CtaButton>
         </Box>
       </CtaContainer>
