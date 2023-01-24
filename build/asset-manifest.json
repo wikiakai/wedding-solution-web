@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "/static/js/main.3177bee5.js",
+    "static/media/gallery2.svg": "/static/media/gallery2.51eed4ed40fc2814ae640cfce753ea54.svg",
+    "static/media/descImage.svg": "/static/media/descImage.f83b9b9029ab6b23da8665206200d703.svg",
+    "static/media/gallery1.svg": "/static/media/gallery1.56d7f13c011a65d5b70895b96597c864.svg",
+    "static/media/hero.svg": "/static/media/hero.206c33582a0bb22a6467b02841c6aaf5.svg",
+    "static/media/gallery4.svg": "/static/media/gallery4.6bd24ca8daace65c8aab6ed73e7d76f1.svg",
+    "static/media/gallery3.svg": "/static/media/gallery3.a296ac9f15a9577b79ff064093472c69.svg",
+    "static/media/logo.svg": "/static/media/logo.4183b8412ee0846d92d7c2d6d4a77023.svg",
+    "static/media/cardIcon1.svg": "/static/media/cardIcon1.da6344fb401fde770851d923b47f598b.svg",
+    "static/media/addressIcon.svg": "/static/media/addressIcon.19870c31c8962c34d392bd575b231764.svg",
+    "static/media/cardIcon3.svg": "/static/media/cardIcon3.c8ee2f58fdb6f687177f3db4b0a10172.svg",
+    "static/media/cardIcon2.svg": "/static/media/cardIcon2.5d5d66519c5fdfea968623283d6a5c3b.svg",
+    "index.html": "/index.html",
+    "static/media/phoneIcon.svg": "/static/media/phoneIcon.e41b150428e4a724dbc3c85c32c89ae9.svg",
+    "static/media/emailIcon.svg": "/static/media/emailIcon.8d30d36c6063c86dcd7647a722bcb472.svg",
+    "main.3177bee5.js.map": "/static/js/main.3177bee5.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.3177bee5.js"
+  ]
+}
