@@ -49,7 +49,12 @@ const Services = () => {
       }}
     >
       <Typography variant="services">Our Services</Typography>
-      <Stack direction={'row'} spacing={5} mt={'40px'} mb={'80px'}>
+      <Stack
+        direction={{ sm: 'column', md: 'row', lg: 'row' }}
+        spacing={{ xs: 1, sm: 2, md: 4 }}
+        mt={'40px'}
+        mb={'80px'}
+      >
         <ServicesCard icon={cardIcon1} title="Wedding Planing" />
         <ServicesCard icon={cardIcon2} title="Wedding Design" />
         <ServicesCard icon={cardIcon3} title="Wedding Menu" />

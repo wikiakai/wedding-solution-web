@@ -1,6 +1,7 @@
 import { Box, Stack, Typography } from '@mui/material'
 import React from 'react'
 import logo from '../../assets/img/logo.svg'
+import { Container } from '@mui/system'
 
 const Footer = () => {
   const navbarItems = [
@@ -13,13 +14,7 @@ const Footer = () => {
   ]
 
   return (
-    <Box
-      sx={{
-        px: '280px',
-        height: '100%',
-        pt: '80px',
-      }}
-    >
+    <Container>
       <Box
         sx={{
           display: 'flex',
@@ -34,7 +29,11 @@ const Footer = () => {
         <Typography variant="home" color={'black'}>
           EVENT SOLUTION
         </Typography>
-        <Stack direction={'row'} spacing={10}>
+        <Stack
+          direction={{ xs: 'column', sm: 'row', md: 'row', lg: 'row' }}
+          spacing={2}
+          justifyContent="center"
+        >
           {navbarItems.map((i) => (
             <Typography variant="body1" cursor={'pointer'}>
               {i}
@@ -42,7 +41,7 @@ const Footer = () => {
           ))}
         </Stack>
       </Box>
-    </Box>
+    </Container>
   )
 }
 

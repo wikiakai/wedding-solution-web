@@ -1,32 +1,37 @@
-import { Container, Stack, Typography, styled, Button } from "@mui/material";
-import React from "react";
-import descImage from "../../assets/img/descImage.svg";
+import { Container, Stack, Typography, styled, Button } from '@mui/material'
+import React from 'react'
+import descImage from '../../assets/img/descImage.svg'
 
 const CtaButton = styled(Button)({
-  backgroundColor: "#B09D59",
-  padding: "10px 38px",
-  color: "#FFFFFF",
-  fontSize: "20px",
-  "&:hover": {
-    backgroundColor: "#383838",
-    color: "#B09D59",
-    boxShadow: "none",
+  backgroundColor: '#B09D59',
+  padding: '10px 38px',
+  color: '#FFFFFF',
+  fontSize: '20px',
+  '&:hover': {
+    backgroundColor: '#383838',
+    color: '#B09D59',
+    boxShadow: 'none',
   },
-  width: "215px",
-});
+  width: '215px',
+})
 const Description = () => {
   return (
     <Container
       sx={{
-        pb: "80px",
+        pb: '80px',
       }}
     >
-      <Stack direction="row">
-        <Stack spacing={5} sx={{ width: "100%" }}>
+      <Stack
+        direction={{ xs: 'column', sm: 'row' }}
+        justifyContent="space-between"
+        alignItems="center"
+        spacing={2}
+      >
+        <Stack spacing={5} sx={{ width: '100%' }}>
           <Typography variant="servicesCardTitle">
             We design & planing for your best moment
           </Typography>
-          <Typography variant="descCaption" color={"#000"}>
+          <Typography variant="descCaption" color={'#000'}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -37,10 +42,16 @@ const Description = () => {
           </Typography>
           <CtaButton size="small">Learn More</CtaButton>
         </Stack>
-        <img src={descImage} alt="" width={"750px"} />
+        <div
+          style={{
+            width: '100%',
+          }}
+        >
+          <img src={descImage} alt="" width="100%" />
+        </div>
       </Stack>
     </Container>
-  );
-};
+  )
+}
 
-export default Description;
+export default Description

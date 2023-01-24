@@ -7,13 +7,14 @@ import addressIcon from '../../assets/img/addressIcon.svg'
 
 const FooterCard = ({ icon, title, desc }) => {
   return (
-    <Box
+    <Stack
+      width={{ xs: '120px', sm: '200px', md: '400px' }}
       sx={{
         bgcolor: '#383838',
         paddingX: '20px',
         borderRadius: '20px',
         boxShadow: '4px 6px 6px 0px #00000040',
-        minWidth: '275px',
+        // minWidth: '275px',
         minHeight: '200px',
         display: 'flex',
         justifyContent: 'center',
@@ -23,14 +24,20 @@ const FooterCard = ({ icon, title, desc }) => {
     >
       <Box
         sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: { xs: 'row', sm: 'column', md: 'column' },
           backgroundColor: '#B09D59',
-          padding: '30px',
+          padding: '25px',
           borderRadius: '50%',
           position: 'relative',
           bottom: '50px',
+          width: { xs: '30px', sm: '45px', md: '60px' },
+          height: { xs: '30px', sm: '45px', md: '60px' },
         }}
       >
-        <img src={icon} alt="" width={'40px'} height={'40px'} />
+        <img src={icon} alt="" width={'80%'} />
       </Box>
       <Box
         sx={{
@@ -47,7 +54,7 @@ const FooterCard = ({ icon, title, desc }) => {
         </Typography>
         <Typography variant="servicesCardDesc">{desc}</Typography>
       </Box>
-    </Box>
+    </Stack>
   )
 }
 const Contact = () => {
@@ -62,12 +69,6 @@ const Contact = () => {
         gap: '20px',
       }}
     >
-      {/* <Stack
-        direction="row"
-        spacing={3}
-        justifyContent="center"
-        alignItems="center"
-      > */}
       <FooterCard
         icon={addressIcon}
         title="Address"
@@ -75,7 +76,6 @@ const Contact = () => {
       />
       <FooterCard icon={phoneIcon} title="Phone" desc="082212344321" />
       <FooterCard icon={emailIcon} title="Email" desc="wikiakai11@gmail.com" />
-      {/* </Stack> */}
     </Container>
   )
 }
