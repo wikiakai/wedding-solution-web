@@ -1,6 +1,8 @@
+## This Project is still in development, please check it frequently
+
 # WEDDING SOLUTION WEB
 
-This project was made by wikiakai for pratice porpose
+This project was made by wikiakai for pratice purpose
 
 Designed by Ageng Ari Nugroho 
 
