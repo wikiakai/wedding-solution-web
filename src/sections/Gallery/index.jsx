@@ -45,62 +45,6 @@ const Gallery = () => {
           />
         </Box>
       ))}
-
-      {/* <Box
-        sx={{
-          width: { xs: '270px', md: '400px' },
-          height: { xs: '370px', md: '400px' },
-        }}
-      >
-        <img
-          src={gallery2}
-          alt="gallery2"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            objectPosition: '70% 0',
-            borderRadius: '20px',
-          }}
-        />
-      </Box>
-      <Box
-        sx={{
-          width: { xs: '270px', md: '400px' },
-          height: { xs: '370px', md: '400px' },
-        }}
-      >
-        <img
-          src={gallery3}
-          alt="gallery3"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            objectPosition: '50% 0',
-            borderRadius: '20px',
-          }}
-        />
-      </Box>
-      <Box
-        sx={{
-          width: { xs: '270px', md: '400px' },
-          height: { xs: '370px', md: '400px' },
-        }}
-      >
-        <img
-          src={gallery4}
-          alt="gallery4"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            borderRadius: '20px',
-
-            objectPosition: '60% 0',
-          }}
-        />
-      </Box> */}
     </Stack>
   )
 }
