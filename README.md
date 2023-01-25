@@ -1,12 +1,16 @@
-## This Project is still in development, please check it frequently
 
 # WEDDING SOLUTION WEB
 
-This project was made by wikiakai for pratice purpose
+> This project was made for pratice purpose, 
 
-Designed by Ageng Ari Nugroho 
+**[Visit Project](https://wedding-solution-web-wikiakai.vercel.app/)**
 
-https://www.figma.com/file/tzbpu2zKlnANcJeTldZtXL/Hacktiv8-Wedding?node-id=0%3A1&t=9vhqmIGs3tm8V1E1-1
+Fully responsive Wedding Solution landing page, build with react and material ui
+
+![screenshot](Screenshoot.png)
+
+> Designed by Ageng Ari Nugroho 
+**[View figma](https://www.figma.com/file/tzbpu2zKlnANcJeTldZtXL/Hacktiv8-Wedding?node-id=0%3A1&t=9vhqmIGs3tm8V1E1-1)**
 
 ## Quick Start
 
@@ -14,4 +18,8 @@ https://www.figma.com/file/tzbpu2zKlnANcJeTldZtXL/Hacktiv8-Wedding?node-id=0%3A1
 - Install dependencies: `npm install` or `yarn`
 - Start the server: `npm run start` or `yarn start`
 - Views are on: `localhost:3000`
+
+## Tech Stack
+- React : 18.2.0
+- Material UI : 5.11.0
 
