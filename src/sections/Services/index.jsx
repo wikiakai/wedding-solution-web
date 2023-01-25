@@ -51,7 +51,7 @@ const Services = () => {
       <Typography variant="sectionTitle">Our Services</Typography>
       <Stack
         direction={{ sm: 'column', md: 'row', lg: 'row' }}
-        spacing={{ xs: 1, sm: 2, md: 4 }}
+        spacing={{ xs: 2, sm: 3, md: 5 }}
         mt={'40px'}
         mb={'80px'}
       >

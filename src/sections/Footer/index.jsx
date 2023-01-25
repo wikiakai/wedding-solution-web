@@ -30,15 +30,40 @@ const Footer = () => {
           EVENT SOLUTION
         </Typography>
         <Stack
-          direction={{ xs: 'column', sm: 'row', md: 'row', lg: 'row' }}
-          spacing={2}
+          direction="row"
           justifyContent="center"
+          alignItems="center"
+          sx={{ flexWrap: 'wrap', gap: '20px' }}
         >
           {navbarItems.map((i) => (
             <Typography variant="body1" cursor={'pointer'}>
               {i}
             </Typography>
           ))}
+        </Stack>
+        <Stack direction="column" justifyContent="center" alignItems="center">
+          <Typography variant="body1">
+            Designed by
+            <a
+              href="https://www.instagram.com/agengari/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {' '}
+              Ageng Ari Nugroho
+            </a>
+          </Typography>
+          <Typography variant="body1">
+            Develop by
+            <a
+              href="https://www.instagram.com/wikiakai/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {' '}
+              wikiakai
+            </a>
+          </Typography>
         </Stack>
       </Box>
     </Container>

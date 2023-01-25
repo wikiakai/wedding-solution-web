@@ -8,14 +8,13 @@ import addressIcon from '../../assets/img/addressIcon.svg'
 const FooterCard = ({ icon, title, desc }) => {
   return (
     <Stack
-      width={{ xs: '120px', sm: '200px', md: '400px' }}
+      width={{ xs: '180px', sm: '200px', md: '400px' }}
       sx={{
         bgcolor: '#383838',
         paddingX: '20px',
         borderRadius: '20px',
         boxShadow: '4px 6px 6px 0px #00000040',
-        // minWidth: '275px',
-        minHeight: '200px',
+        minHeight: '230px',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -62,11 +61,17 @@ const Contact = () => {
     <Container
       sx={{
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: {
+          xs: 'space-evenly',
+          sm: 'space-evenly',
+          md: 'center',
+          lg: 'center',
+        },
         alignItems: 'center',
         py: '50px',
-        flexDirection: 'row',
-        gap: '20px',
+        flexDirection: { xs: 'row', sm: 'row', md: 'row', lg: 'row' },
+        flexWrap: { xs: 'wrap', sm: 'wrap', md: 'noWrap', lg: 'noWrap' },
+        gap: '35px',
       }}
     >
       <FooterCard
