@@ -20,9 +20,8 @@ const HeroImg = styled('div')({
   height: '100vh',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
-  backgroundPosition: 'center',
+  backgroundPosition: '35% 40%',
   marginBottom: '80px',
-  // filter: "brightness(40%)",
 })
 
 const HomeTitle = styled(Typography)({
@@ -45,7 +44,7 @@ const CtaContainer = styled('div')({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  marginTop: '80px',
+  marginTop: '100px',
 })
 
 const CtaText = styled(Typography)({
@@ -104,13 +103,6 @@ const Home = () => {
         alignItems="center"
         padding={{ xs: '10px', sm: '10px' }}
       >
-        <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
-          <HomeTitle variant="home">EVENT</HomeTitle>
-        </Box>
-        <img src={logo} width="80px" alt="logo" />
-        <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
-          <HomeTitle variant="home">SOLUTION</HomeTitle>
-        </Box>
         <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }}>
           <IconButton
             size="large"
@@ -146,6 +138,42 @@ const Home = () => {
               </MenuItem>
             ))}
           </Menu>
+        </Box>
+        <Box
+          sx={{
+            display: { xs: 'flex', sm: 'flex', md: 'none' },
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <HomeTitle
+            variant="homeMobile"
+            sx={{
+              fontSize: '25px',
+            }}
+          >
+            EVENT SOLUTION
+          </HomeTitle>
+        </Box>
+        <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
+          <HomeTitle variant="home">EVENT</HomeTitle>
+        </Box>
+        <Box
+          sx={{
+            width: { xs: '50px', sm: '70px', md: '80px', lg: '80px' },
+          }}
+        >
+          <img
+            src={logo}
+            style={{
+              width: '100%',
+            }}
+            alt="logo"
+          />
+        </Box>
+
+        <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
+          <HomeTitle variant="home">SOLUTION</HomeTitle>
         </Box>
       </Stack>
       <Box

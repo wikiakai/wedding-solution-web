@@ -3,8 +3,15 @@ export default {
     fontFamily: 'Poppins',
     fontStyle: 'normal',
     fontWeight: 400,
-    // fontSize: "38px", // 32px
     lineHeight: '2.5rem', // 40px
+    letterSpacing: '0em',
+    textAlign: 'center',
+  },
+  homeMobile: {
+    fontFamily: 'Poppins',
+    fontStyle: 'normal',
+    fontWeight: 500,
+    lineHeight: '24px', // 40px
     letterSpacing: '0em',
   },
   navbar: {
